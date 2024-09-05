@@ -1,10 +1,14 @@
 def Appropriation ():
     netprofit=int(input("Enter the Net Profit: "))
-    check=int(input("How Do you Want to Calculate Salary,Press 1 for per Month , Press 2 for per quator , press 3 for Half Yearly or Press 4 to Give it Directly : "))
+    check=int(input("""How Do you Want to Calculate Salary,
+                    Press 1 for per Month, 
+                    Press 2 for per quator, 
+                    press 3 for Half Yearly or 
+                    Press 4 to Give it Directly : """))
+    TotalSalary=0
+    sal=[]
+    partner=int(input("Enter the no of partner who get Salary :"))
     if check == 1:
-         TotalSalary=0
-         sal=[]
-         partner=int(input("Enter the no of partner who get Salary :"))
          for i in range(partner): 
               Salary=int(input("Enter the Amount of Salary Given to The Partner :"))
               sal.append(Salary)
@@ -13,9 +17,6 @@ def Appropriation ():
               TotalSalary=TotalSalary+totalsalary
          print("Sum Total Salary of All Partner are : ",TotalSalary) 
     elif check == 2 :
-         TotalSalary=0
-         sal=[]
-         partner=int(input("Enter the no of partner who get Salary :"))
          for i in range(partner): 
               Salary=int(input("Enter the Amount of Salary Given to The Partner :"))
               sal.append(Salary)
@@ -24,9 +25,6 @@ def Appropriation ():
               TotalSalary=TotalSalary+totalsalary
          print("Sum Total Salary of All Partner are : ",TotalSalary)
     elif check == 3 :
-         TotalSalary=0
-         sal=[]
-         partner=int(input("Enter the no of partner who get Salary :"))
          for i in range(partner): 
               Salary=int(input("Enter the Amount of Salary Given to The Partner :"))
               sal.append(Salary)
@@ -35,9 +33,6 @@ def Appropriation ():
               TotalSalary=TotalSalary+totalsalary
          print("Sum Total Salary of All Partner are : ",TotalSalary) 
     elif check == 4 :
-         TotalSalary=0
-         sal=[]
-         partner=int(input("Enter the no of partner who get Salary : "))
          for i in range(partner):
               Salary=int(input("Enter the Amount of Salary Given to The Partner :"))
               sal.append(Salary)
