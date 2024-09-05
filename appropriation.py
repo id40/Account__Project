@@ -10,7 +10,7 @@ def Appropriation ():
     partner=int(input("Enter the no of partner who get Salary :"))
     if check == 1:
          for i in range(partner): 
-              Salary=int(input("Enter the Amount of Salary Given to The Partner :"))
+              Salary=int(input(f"Enter the amount of salary given to partner {i + 1}: "))
               sal.append(Salary)
               totalsalary=Salary*12
               print("Total Salary of the Partner is : ", totalsalary)
@@ -18,7 +18,7 @@ def Appropriation ():
          print("Sum Total Salary of All Partner are : ",TotalSalary) 
     elif check == 2 :
          for i in range(partner): 
-              Salary=int(input("Enter the Amount of Salary Given to The Partner :"))
+              Salary=int(input(f"Enter the amount of salary given to partner {i + 1}: "))
               sal.append(Salary)
               totalsalary=Salary*4
               print("Total Salary of the Partner is : ", totalsalary)
@@ -26,7 +26,7 @@ def Appropriation ():
          print("Sum Total Salary of All Partner are : ",TotalSalary)
     elif check == 3 :
          for i in range(partner): 
-              Salary=int(input("Enter the Amount of Salary Given to The Partner :"))
+              Salary=int(input(f"Enter the amount of salary given to partner {i + 1}: "))
               sal.append(Salary)
               totalsalary=Salary*2
               print("Total Salary of the Partner is : ", totalsalary)
@@ -34,20 +34,22 @@ def Appropriation ():
          print("Sum Total Salary of All Partner are : ",TotalSalary) 
     elif check == 4 :
          for i in range(partner):
-              Salary=int(input("Enter the Amount of Salary Given to The Partner :"))
+              Salary=int(input(f"Enter the amount of salary given to partner {i + 1}: "))
               sal.append(Salary)
               TotalSalary=TotalSalary+Salary
          print("Sum Total Salary of All Partner are : ",TotalSalary)
     else :      
           print("Sorry wrong input , TRY Again Later . ")
 
-    commission=int(input("Do you want to calculate the Commission ( [Press 1] or want to give it Directly[Press 2] ): "))
+    commission=int(input("Do you want to calculate the commission ( [Press 1] or want to give it directly[Press 2] ): "))
     if commission == 1:
-              choice=int(input("Which method do you want to do calculation press 1 for before charging such profit or Press 2 for after charging such profit : "))
+              choice=int(input("""Which method do you want to do calculation
+                              press 1 for before charging such profit or 
+                              Press 2 for after charging such profit: """))
               if choice == 1:
                    totalcommission=0
                    counter=0
-                   noofpartner=int(input("Enter the No. of Patner Whose Commission is to be Calculated: "))
+                   noofpartner=int(input("Enter the no. of patner whose commission is to be calculated: "))
                    rate=int(input("Enter the rate at which commission is to be calculated: "))
                    while counter<noofpartner:
                         calc=(netprofit*rate)//100
@@ -58,7 +60,7 @@ def Appropriation ():
               elif choice == 2:
                 totalcommission=0
                 counter=0
-                noofpartner=int(input("Enter the No. of Patner Whose Commission is to be Calculated: "))
+                noofpartner=int(input("Enter the no. of patner whose commission is to be calculated: "))
                 rate=int(input("Enter the rate at which commission is to be calculated: "))
                 while counter<noofpartner:
                     total=100+rate
@@ -72,7 +74,7 @@ def Appropriation ():
     elif commission == 2:
          totalcommission=0
          counter=0
-         noofpartner=int(input("Enter the No. of Patner Whose Commission is to be Calculated: "))
+         noofpartner=int(input("Enter the no. of patner whose commission is to be calculated: "))
          while counter<noofpartner :
               total=0
               comm=int(input("Enter the amount of commission to be added : "))
@@ -84,7 +86,7 @@ def Appropriation ():
          print("Wrong input has been made , try Again Later. ")
          
 
-    intrestonCapital=int(input("Do you want to Calculate Interest On Capital Press 1 or Want to give it Directly for that Press 2 : "))
+    intrestonCapital=int(input("Do you want to calculate interest on capital Press 1 or want to give it directly for that Press 2 : "))
     if intrestonCapital == 1:
          totalinterest=0
          ratios=[]
