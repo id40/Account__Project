@@ -119,7 +119,7 @@ def Appropriation ():
          print("Oops! Wrong Input Has Been Given , Try Again.")
     intrestonDrawing=int(input("Do you want to Calculate Interest On Drawing Press 1 or Want to give it Directly for that Press 2 : "))
     if intrestonDrawing == 1:
-         totaldrawing=0
+         total_drawing=0
          ratios=[]
          draw=[]
          partner=int(input ("Enter the Total no of partner in the Company : "))
