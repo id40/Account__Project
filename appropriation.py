@@ -132,8 +132,8 @@ def Appropriation ():
          for k in range(partner):
               IOD=(draw[k]*ratios[k])//100
               print(f"Interest on Drawing for Partner {k + 1}: {IOD}")
-              totaldrawing=totaldrawing+IOD
-         print(totaldrawing) 
+              total_drawing=total_drawing+IOD
+         print(total_drawing) 
     
     elif intrestonDrawing == 2 :
          partner=int(input("Enter the no.of  partner in a Company who have used the Drawing Facilities:  "))
