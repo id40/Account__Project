@@ -108,7 +108,7 @@ def Appropriation ():
          print(totalinterest) 
     
     elif intrestonCapital == 2 :
-         partner=int(input("Enter the no., of Total partner in a xcompany "))
+         partner=int(input("Enter the no.of Total partner in a company: "))
          cap=[]
          for i in range(partner):
               capital=int(input("Enter the Amountr of Interest on Capital Given to the Partner : "))
