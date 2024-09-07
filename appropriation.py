@@ -53,7 +53,7 @@ def Appropriation ():
                    rate=int(input("Enter the rate at which commission is to be calculated: "))
                    while counter<noofpartner:
                         calc=(netprofit*rate)//100
-                        print(calc)
+                        print(f"Commission of the partner{counter+1} is {calc}: ")
                         counter+=1
                         totalcommission=totalcommission+calc
                    print(totalcommission) 
@@ -65,7 +65,7 @@ def Appropriation ():
                 while counter<noofpartner:
                     total=100+rate
                     calc=(netprofit*rate)//total
-                    print(calc)
+                    print(f"Commission of the partner{counter} is {calc}: ")
                     counter+=1
                     totalcommission=totalcommission+calc
                 print(totalcommission)
@@ -77,7 +77,7 @@ def Appropriation ():
          noofpartner=int(input("Enter the no. of patner whose commission is to be calculated: "))
          while counter<noofpartner :
               total=0
-              comm=int(input("Enter the amount of commission to be added : "))
+              comm=int(input(f"Enter the amount of commission of the partner{counter+1}: "))
               calc=comm+total
               counter+=1
               totalcommission=totalcommission+calc
@@ -111,7 +111,7 @@ def Appropriation ():
               capital=int(input("Enter the Amountr of Interest on Capital Given to the Partner : "))
               cap.append(capital)
               totalinterest=sum(cap)
-         print("Total Interest on Capital Provided to the partner is :",totalinterest)
+         print(f"Total Interest on Capital Provided to the partner{i+1} is {totalinterest}:")
     else :
          print("Oops! Wrong Input Has Been Given , Try Again.")
     intrestonDrawing=int(input("Do you want to Calculate Interest On Drawing Press 1 or Want to give it Directly for that Press 2 : "))
@@ -119,12 +119,12 @@ def Appropriation ():
          total_drawing=0
          ratios=[]
          draw=[]
-         partner=int(input ("Enter the Total no of partner in the Company : "))
+         partner=int(input ("Enter the Total no. of partner in the Company : "))
          for i in range(partner):
               ratio = int(input(f"Enter the ratio for Partner {i + 1}: "))
               ratios.append(ratio)
          for j in range(partner ):
-              drawing = int(input(f"Enter the amount which the Partner has Drowned {j + 1}: "))
+              drawing = int(input(f"Enter the amount which the Partner{j + 1} has Drowned : "))
               draw.append(capital)
          for k in range(partner):
               IOD=(draw[k]*ratios[k])//100
@@ -136,10 +136,10 @@ def Appropriation ():
          partner=int(input("Enter the no.of  partner in a Company who have used the Drawing Facilities:  "))
          draw=[]
          for i in range(partner):
-              capital=int(input("Enter the Amount of Interest on Drawing Of the Partner : "))
+              capital=int(input(f"Enter the Amount of Interest on Drawing Of the Partner{i+1} : "))
               draw.append(capital)
          totaldrawing = sum(draw)
-         print("Total Interest on Drawing Provided to the partners is:", totaldrawing)
+         print(f"Total Interest on Drawing Provided to the partners{i+1} is {totaldrawing}:")
     else :
          print("Oops! Wrong Input Has Been Given , Try Again.")
     creditside=netprofit+totaldrawing
