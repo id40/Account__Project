@@ -86,7 +86,8 @@ def Appropriation ():
          print("Wrong input has been made , try Again Later. ")
          
 
-    intrestonCapital=int(input("Do you want to calculate interest on capital Press 1 or want to give it directly for that Press 2 : "))
+    intrestonCapital=int(input("""Do you want to calculate interest on capital Press 1 or 
+                                want to give it directly for that Press 2 : """))
     if intrestonCapital == 1:
          totalinterest=0
          ratios=[]
@@ -111,10 +112,11 @@ def Appropriation ():
               capital=int(input("Enter the Amountr of Interest on Capital Given to the Partner : "))
               cap.append(capital)
               totalinterest=sum(cap)
-         print(f"Total Interest on Capital Provided to the partner{i+1} is {totalinterest}:")
+         print(f"Total Interest on Capital Provided to the partner {i+1} is {totalinterest}:")
     else :
          print("Oops! Wrong Input Has Been Given , Try Again.")
-    intrestonDrawing=int(input("Do you want to Calculate Interest On Drawing Press 1 or Want to give it Directly for that Press 2 : "))
+    intrestonDrawing=int(input("""Do you want to Calculate Interest On Drawing Press 1 or
+                                Want to give it Directly for that Press 2 : """))
     if intrestonDrawing == 1:
          total_drawing=0
          ratios=[]
@@ -138,11 +140,11 @@ def Appropriation ():
          for i in range(partner):
               capital=int(input(f"Enter the Amount of Interest on Drawing Of the Partner{i+1} : "))
               draw.append(capital)
-         totaldrawing = sum(draw)
-         print(f"Total Interest on Drawing Provided to the partners{i+1} is {totaldrawing}:")
+         total_drawing = sum(draw)
+         print(f"Total Interest on Drawing Provided to the partners{i+1} is {total_drawing}:")
     else :
          print("Oops! Wrong Input Has Been Given , Try Again.")
-    creditside=netprofit+totaldrawing
+    creditside=netprofit+total_drawing
     debitside=TotalSalary+totalcommission+totalinterest
     if creditside > debitside :
          Total=creditside-debitside
