@@ -3,7 +3,9 @@ def revaluation():
     decision = []
     negative = 0
     positive = 0
-    # write something how to take input.
+    sum_total1 = 0
+    sum_total2 = 0
+
     print("""Description
 	   In asset:-
 	   press 1 for stock
@@ -19,23 +21,30 @@ def revaluation():
 	   press 9 creditor
 	   press 10 for workman compensioation reserve """)
 
-    while True:
+    choose_1 = int(input(
+        "How many input do you want to give in debit side of revaluation account: "))
+    while sum_total1 < choose_1:
         select = int(input(
-            "Enter the no.of assets and liability which will go to debit side of revaluaition account: "))
+            "See the above description and enter the no.of asset and liability which will go to the debit side of revaluaition account: "))
         selection.append(select)
-        check = input("Do you want to add more data[yes/no]: ")
-        if check.lower() == 'no':
-            break
+        sum_total1 += 1
+        if sum_total1 == choose_1:
+            check_1 = input("Do you want to add any more data[yes/no]: ")
+            if check_1.lower() == 'yes':
+                sum_total1 = 0
+                more = int(
+                    input("How many more data do you want to add more: "))
+                choose_1 = more
     for i in selection:
         if i == 1:
-            accept = int(input("Enter the amount decreased in stock: "))
+            accept = int(input("Enter the decreased amount of stock: "))
             negative = negative+accept
         elif i == 2:
             accept = int(
                 input("Enter the depreciated amount of plant/machinery: "))
             negative += accept
         elif i == 3:
-            accept = int(input("Enter the amount of land and building"))
+            accept = int(input("Enter the amount of land and building: "))
             negative += accept
         elif i == 4:
             accept = int(input("Enter the amount of depreciated furniture: "))
@@ -63,14 +72,21 @@ def revaluation():
         else:
             print("Sorry!, wrong input has been made try again later. ")
 
-    while True:
+    choose_2 = int(input(
+        "How many input do you want to give in credit side of revaluation account: "))
+    while sum_total2 < choose_2:
         decide = int(input(
-            "Enter the no.of assets and liability which will go to credit side of revaluaition account: "))
+            "See the above description and enter the no.of asset and liability which will go to credit side of revaluaition account: "))
         decision.append(decide)
-        check = input("Do you want to add more data[yes/no]: ")
-        if check.lower() == 'no':
-            break
-    for j in selection:
+        sum_total2 += 1
+        if sum_total2 == choose_2:
+            check = input("Do you want to add more data[yes/no]: ")
+            if check.lower() == 'yes':
+                sum_total2 = 0
+                more_2 = int(
+                    input("How many more data do you want to enter: "))
+                choose_2 = more_2
+    for j in decision:
         if j == 1:
             amount = int(
                 input("Enter the amount in which stock has been appreciated: "))
@@ -133,7 +149,7 @@ def revaluation():
         for j in range(partner):
             total_rev = (total*ratios[j])//total_ratio
             print(
-                f"partner{j+1} distribution of profit/loss on revalution are: {total_rev} ")
+                f"partner {j+1} distribution of profit/loss on revalution are: {total_rev} ")
 
 
 revaluation()
